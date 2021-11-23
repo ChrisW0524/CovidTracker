@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #2f3640;
+    background: #ecf0f1;
+}
+
+.home{
+    background-image: url("/res/bg.jpg");
+    height: auto;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding: 25px 50px;
+    color: #ffffff;
+}
+
+#logo{
+    font-size: 48px;
+}
+
+.home_content{
+    height: 100%;
+    max-width: 800px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    
+}
+
+.title_container{
+    padding-right: 260px;
+}
+
+.update_container{
+    display: flex;
+    padding: 4px 12px 4px 10px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    border-radius: 16px;
+    background-color: hsla(0,0%,100%,.1);
+    width: 165px;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.update_container i{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#update_text{
+    font-size: 16px;
+    padding: 0;
+}
+
+.animate{
+    color: #3498db;
+}
+
+.home_content h1{
+    margin-top: 38px;
+    font-size: 48px;
+}
+
+.home_content p{
+    font-size: 24px;
+    padding-top: 10px;
+}
+
+.main_content{
+    height: auto;
+    margin: 25px 50px;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 0px;
+}
+
+.main_content h1{
+    font-size: 48px;
+}
+
+.main_content hr{
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 30px 0px;
+    border: 0; border-top: 2px solid #2f3640;
+}
+
+.list{
+    display: grid;
+    height: auto;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.item{
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 30px;
+    transition: 0.3s;
+    font-size: 24px;
+    line-height: 2rem;
+}
+
+.item h3{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.icon{
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.item:hover{
+    background-color: #2f3640;
+    color: #ffffff
+}
+
+.button_container{
+    display: grid;
+    place-items: center;
+}
+
+#button{
+    border: 2px solid #3498db;
+    margin-top: 50px;
+    padding: 14px 40px;
+    border-radius: 100px;
+    text-decoration:none;
+    color: #3498db;
+    transition: 300ms ease;
+    font-size: 28px;
+  }
+  
+  #button:hover{
+    background-color: #3498db;
+    color: #ecf0f1;
+  }

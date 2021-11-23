@@ -1,0 +1,129 @@
+/* navbar */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #2f3640;
+    color: #e8ffff;
+    padding: 25px 50px;
+    height: auto;
+}
+
+.logo{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    height: 50px;
+    cursor: pointer;
+}
+
+.nav_links{
+    list-style: none;
+    font-size: 21px;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 40px;
+}
+
+.nav_links a{
+    transition: opacity 1s linear;
+    color: #e8ffff;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.nav_links a:hover{
+    border-bottom: solid #ffffff;
+    text-decoration: none;  
+}
+
+.nav_links a:visited{
+    text-decoration: none;  
+}
+
+.nav_links a:active{
+    text-decoration: none;  
+}
+
+/*footer */
+
+footer{
+    background: #2f3640;
+    height: auto;
+    width: auto;
+    padding-top: 40px;
+    color: #e8ffff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.footer-content a{
+    text-decoration: none;
+    color: #e8ffff;
+}
+
+.footer-content a i{
+    font-size: 2.5rem;
+    transition: color .4s ease;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+
+.footer-bottom{
+    background-color: #000000;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    font-size: 14px;
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-weight: 200;
+}
+
+#footer-bottom-text{
+    margin-top: 10px;
+}
+
+#footer-link{
+    color: #e8ffff;
+}
+
+
+#github-link{
+    margin: 0 10px;
+    transition: color 0.4s ease;
+}
+
+#github-link:hover{
+    color:#3498db;
+}

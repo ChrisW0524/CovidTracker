@@ -1,0 +1,193 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #2f3640;
+    background: #ecf0f1;
+}
+
+.map_container{
+    background-color: aquamarine;
+    display: grid;
+    place-items: center;
+    height: 750px;
+}
+
+#map {
+    width: 100%; 
+    height: 100%;
+}
+
+.main_content{
+    height: auto;
+    margin: 25px 50px;
+    border-radius: 5px;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Map setup */
+
+.info { 
+    padding: 6px 8px; 
+    font: 14px/16px Arial, Helvetica, sans-serif; 
+    background: white; background: rgba(255,255,255,0.8); 
+    box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+    border-radius: 5px; 
+}
+
+.info h4 { 
+    margin: 0 0 5px; 
+    color: #777; 
+}
+
+.legend { 
+    text-align: left; 
+    line-height: 18px; 
+    color: #555; 
+} 
+    
+.legend i { 
+    width: 18px; 
+    height: 18px; 
+    float: left; 
+    margin-right: 8px; 
+    opacity: 0.7; 
+}
+
+/* content setup */
+
+.grid_container{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    margin-top: 1rem;
+}
+
+.chart_container{
+    height: 500px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.line_container{
+    margin-top: 1rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    height: 750px;
+}
+
+/* Radio button */
+
+.radio_container{
+    display: grid;
+    place-items: center;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+}
+.radio{
+    display: flex;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #3498db;
+}
+
+.radio_input{
+    display: none;
+}
+
+.radio_label{
+    padding: 8px 14px;
+    font-size: 24px;
+    color:#3498db;
+    background: #ffffff;
+    cursor: pointer;
+    transition: background 0.25s;
+    width: 175px;
+    text-align: center;
+}
+
+.radio_label:not(:last-of-type){
+    border-right: 2px solid #3498db;
+}
+
+.radio_input:checked + .radio_label{
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+/* Loader */
+#loading_container .loader_wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ecf0f1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+#loading_container .loading{
+    opacity: 1;
+    visibility: visible;
+}
+
+#loading_container svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    animation: rotate 2s linear infinite;
+}
+
+#loading_container circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke: #2f3640;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate{
+    0%, 100%{
+        stroke-dashoffset: 440;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    50.1%{
+        stroke-dashoffset: 880;
+    }
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg)
+    }
+}

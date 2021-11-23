@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/data.css" />
+    <link rel="stylesheet" href="/static/css/nav_foot.css" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/c38544a419.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="/res/logo.svg" alt="logo" />
+        <nav>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li id="edge_link"><a href="data.html">Data</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="body_container">
+        <div id="select_container">
+            <!-- Country Select-->
+            <h5 id="country_select_header">Select Country:</h5>
+            <div>
+                <div id="select_box_container">
+                    <div id="select_box">
+                        <div class="options_container">
+                            <!-- Options added via Javascript -->
+                            <div class="option">
+                                <input type="radio" id="country" class="radio" />
+                                <label for="Global">Global</label>
+                            </div>
+                        </div>
+                        <div class="selected"></div>
+                        <div class="search_box">
+                            <input type="text" placeholder="Enter a country..." />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="grid_container">
+            <div class="left_container">
+                <div class="data_card_container">
+                    <div class="center data_card" id="data1">
+                        <h5>Total Confirmed</h5>
+                        <span id="total_confirmed"></span>
+                    </div>
+                    <div class="center data_card" id="data2">
+                        <h5>Total Recovered</h5>
+                        <span id="total_recovered"></span>
+                    </div>
+                    <div class="center data_card" id="data3">
+                        <h5>Total Deaths</h5>
+                        <span id="total_deaths"></span>
+                    </div>
+                    <div class="center data_card" id="data4">
+                        <h5>New Confirmed</h5>
+                        <span id="new_confirmed"></span>
+                    </div>
+                    <div class="center data_card" id="data5">
+                        <h5>New Recovered</h5>
+                        <span id="new_recovered"></span>
+                    </div>
+                    <div class="center data_card" id="data6">
+                        <h5>New Deaths</h5>
+                        <span id="new_deaths"></span>
+                    </div>
+                </div>
+                <div id="line_chart_container">
+                    <canvas id="line_chart"></canvas>
+                </div>
+            </div>
+            <div class="right_container">
+                <div class="pie_container" id="pie_chart1">
+                    <canvas id="pie_recovery"></canvas>
+                </div>
+                <div class="pie_container" id="pie_chart2">
+                    <canvas id="pie_deaths"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="lower_container">
+            <div id="line_container_1" class="line_container center">
+                <canvas id="line_1"></canvas>
+            </div>
+            <div id="line_container_2" class="line_container center">
+                <canvas id="line_2"></canvas>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>About Covid-19 Tracker</h3>
+            <br />
+            <p>
+                Click the icon below to view the github repository:
+            </p>
+            <a href="https://github.com/Reversal9/COVID-Project" target="_blank"><i id="github-link"
+                    class="fa fa-github"></i></a>
+        </div>
+        <div class="footer-bottom">
+            <p>Designed by: <span>Chuyan Wang, Jonnen Chong</span></p>
+            <p id="footer-bottom-text">
+                Source:
+                <span><a id="footer-link" target="_blank"
+                        href="https://documenter.getpostman.com/view/10808728/SzS8rjbc">Coronavirus COVID19
+                        API</a></span>
+            </p>
+        </div>
+    </footer>
+
+    <div class="loader_wrapper loading">
+        <svg>
+            <circle cx="70" cy="70" r="70" />
+        </svg>
+    </div>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

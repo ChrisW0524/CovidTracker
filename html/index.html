@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/css/main.css" />
+  <link rel="stylesheet" href="/static/css/nav_foot.css" />
+  <title>Covid-19 Tracker</title>
+  <script src="https://kit.fontawesome.com/c38544a419.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="/static/js/main.js"></script>
+</head>
+
+<body>
+  <div class="home">
+    <i id="logo" class="fas fa-shield-virus"></i>
+    <div class="home_content">
+      <div class="update_container">
+        <i class="fas fa-calendar-alt"></i>
+        <p id="update_text">Updated <b>Daily</b></p>
+      </div>
+      <div class="title_container">
+        <h1>Stay up-to-date about <span class="animate"></span></h1>
+      </div>
+      <p>
+        Get valuable live Coronavirus data with the COVID-19 Tracker,
+        summarized by total confirmed cases, recovered cases, deaths,
+        geography and more.
+      </p>
+    </div>
+  </div>
+  <header>
+    <img class="logo" src="/res/logo.svg" alt="logo" />
+    <nav>
+      <ul class="nav_links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li id="edge_link"><a href="data.html">Data</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main_content">
+    <h1>View the latest COVID-19 data:</h1>
+    <hr>
+    <div class="list">
+      <div class="item" id="item_1">
+        <i class="icon fas fa-arrows-alt-h"></i>
+        <h3>Compare</h3>
+        <p> Understand the severity of Covid-19 in various areas by comparing the data trends of different countries</p>
+      </div>
+      <div class="item" id="item_2">
+        <i class="icon fas fa-globe"></i>
+        <h3>Summary</h3>
+        <p>Visualize the spread of Covid-19 with a heatmap of confirmed cases worldwide</p>
+      </div>
+      <div class="item" id="item_3">
+        <i class="icon far fa-flag"></i>
+        <h3>Data</h3>
+        <p>Stay up-to-date with a detailed visualization of Coronavirus data in specific countries</p>
+      </div>
+      <div class="item" id="item_4">
+        <i class="icon fas fa-chart-line"></i>
+        <h3>Trends</h3>
+        <p>Analyze and predict the trend of confirmed cases, recovered cases and deaths in different countries</p>
+      </div>
+    </div>
+    <div class="button_container">
+      <a id="button" href="map.html">Go to dashboard</a>
+    </div>
+  </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <h3>About Covid-19 Tracker</h3>
+      <br />
+      <p>
+        Click the icon below to view the github repository:
+      </p>
+      <a href="https://github.com/Reversal9/COVID-Project" target="_blank"><i id="github-link"
+          class="fa fa-github"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <p>Designed by: <span>Chuyan Wang, Jonnen Chong</span></p>
+      <p id="footer-bottom-text">Source: <span><a id="footer-link" target="_blank"
+            href="https://documenter.getpostman.com/view/10808728/SzS8rjbc">Coronavirus COVID19 API</a></span></p>
+    </div>
+  </footer>
+
+  <script>
+    var typed = new Typed(".animate", {
+      strings: [
+        "Coronavirus",
+        "confirmed cases",
+        "recovered cases",
+        "deaths",
+        "data trends",
+      ],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+    });
+  </script>
+</body>
+
+</html>
